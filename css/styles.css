@@ -37,63 +37,67 @@ body::before {
     z-index: -1;
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons - Minimalist */
 .back-btn, .return-home-btn, .contact-btn {
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #5ed6ff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 0.9rem;
-    background: rgba(10, 25, 49, 0.7);
-    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.2rem;
     top: 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: all 0.3s ease;
     z-index: 1000;
-    border: 1px solid rgba(94, 214, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .return-home-btn {
     top: 1rem;
     left: 1rem;
+    color: #5ed6ff;
+    background: rgba(10, 25, 49, 0.7);
+    border: 1px solid rgba(94, 214, 255, 0.3);
 }
 
 .contact-btn {
     bottom: 1rem !important;
     left: 1rem !important;
-    padding: 0.5rem 1rem !important;
+    padding: 0.6rem 1.2rem !important;
     font-size: 0.9rem !important;
-    border-radius: 5px !important;
+    border-radius: 6px !important;
 }
 
 .contact-me-btn {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    background: rgba(10, 25, 49, 0.7);
-    color: #5ed6ff;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
     font-size: 0.9rem;
-    border: 1px solid rgba(94, 214, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 .contact-me-btn:hover {
-    background: rgba(10, 25, 49, 0.9);
-    color: #fff;
-    transform: translateX(-3px);
-    border-color: #5ed6ff;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 .return-home-btn:hover, .contact-btn:hover {
     background: rgba(10, 25, 49, 0.9);
-    color: #fff;
-    transform: translateX(3px);
+    color: #ffffff;
+    transform: translateY(-2px);
     border-color: #5ed6ff;
 }
 
@@ -467,21 +471,21 @@ body::before {
     padding-left: 1.5rem;
 }
 
-/* Card Styles */
+/* Card Styles - About Me Section (Translucent Grey with Elevation) */
 .cool-btn-card {
-    background: #7d2ae8;
+    background: rgba(30, 30, 35, 0.5);
     border-radius: 12px;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
     transition: all 0.3s ease;
     text-align: center;
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    border: 2px solid #7d2ae8;
+    gap: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     width: 4in !important;
     height: 2in !important;
     min-width: 4in !important;
@@ -489,37 +493,97 @@ body::before {
     min-height: 2in !important;
     max-height: 2in !important;
     box-sizing: border-box;
-    box-shadow: 0 0 6px rgba(125, 42, 232, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3);
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 .cool-btn-card *, .cool-btn-card *:not(svg) {
-    color: #000 !important;
+    color: #ffffff !important;
+}
+
+/* Card Styles - Inner HTML Pages (Match Main Page Cards) */
+.cool-btn-card-inner {
+    background: rgba(30, 30, 35, 0.5);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: 4in !important;
+    height: 2in !important;
+    min-width: 4in !important;
+    max-width: 4in !important;
+    min-height: 2in !important;
+    max-height: 2in !important;
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    font-size: 0.95rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+.cool-btn-card-inner *, .cool-btn-card-inner *:not(svg) {
+    color: #ffffff !important;
 }
 
 /* Left column cards */
 .cool-btn-card[href*="goals"],
 .cool-btn-card[href*="work_experience"],
 .cool-btn-card[href*="certifications"] {
-    justify-self: start;
+    justify-self: center;
+}
+
+/* Left column cards - inner */
+.cool-btn-card-inner[href*="goals"],
+.cool-btn-card-inner[href*="work_experience"],
+.cool-btn-card-inner[href*="certifications"] {
+    justify-self: center;
 }
 
 /* Right column cards */
 .cool-btn-card[href*="education"],
 .cool-btn-card[href*="projects"],
 .cool-btn-card[href*="extracurriculars"] {
-    justify-self: end;
+    justify-self: center;
+}
+
+/* Right column cards - inner */
+.cool-btn-card-inner[href*="education"],
+.cool-btn-card-inner[href*="projects"],
+.cool-btn-card-inner[href*="extracurriculars"] {
+    justify-self: center;
 }
 
 .cool-btn-card:hover, .cool-btn-card:focus {
-    border: 2px solid #5ed6ff;
-    box-shadow: 0 1px 3px rgba(94, 214, 255, 0.10);
-    transform: translateY(-3px);
-    background: #0a1931;
-    color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-6px);
+    background: rgba(40, 40, 45, 0.6);
+    color: #ffffff;
     z-index: 2;
+}
+
+.cool-btn-card-inner:hover, .cool-btn-card-inner:focus {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-6px);
+    background: rgba(40, 40, 45, 0.6);
+    color: #ffffff;
+    z-index: 2;
+}
+.cool-btn-card-inner:hover *, .cool-btn-card-inner:focus *, .cool-btn-card-inner:hover *:not(svg), .cool-btn-card-inner:focus *:not(svg) {
+    color: #ffffff !important;
 }
 
 .cool-btn-icon {
@@ -529,7 +593,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #616161;
+    background: rgba(255, 255, 255, 0.1);
     flex-shrink: 0;
     transition: all 0.3s ease;
     margin-bottom: 0.5rem;
